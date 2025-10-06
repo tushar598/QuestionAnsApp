@@ -111,9 +111,9 @@ export default function QuestionForm() {
       formData.append("question", question);
       formData.append("image", image);
 
-      const apiEndpoint = isDemoMode ? "/api/generate-demo" : "/api/generate";
+   
 
-      const response = await fetch(apiEndpoint, {
+      const response = await fetch("/api/generate", {
         method: "POST",
         body: formData,
       });
